@@ -16,7 +16,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const socket = io("http://localhost:3001", {
+    const socket = io("https://chatsphere1-o8ny.onrender.com", {
       withCredentials: true,
     });
     dispatch(
