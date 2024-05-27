@@ -25,7 +25,8 @@ import User from "./models/userModel.js";
 // app.use(cors());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: ["https://chat-sphere1.vercel.app", "http://localhost:3001"],
     credentials: true,
     withCredentials: true,
   }),
