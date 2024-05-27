@@ -15,18 +15,20 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  cors({
-    origin: ["https://chat-sphere1.vercel.app", "http://localhost:3001"],
-    credentials: true,
-    withCredentials: true,
-  }),
-);
+// app.use(
+//   cors({
+// origin: ["https://chat-sphere1.vercel.app", "http://localhost:3001"],
+//     credentials: true,
+//     withCredentials: true,
+//   }),
+// );
 const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: ["https://chat-sphere1.vercel.app", "http://localhost:3001"],
+
     credentials: true,
     withCredentials: true,
   },
