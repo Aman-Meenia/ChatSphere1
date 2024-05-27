@@ -14,6 +14,7 @@ export const useLogin = () => {
       return;
     }
     setLoading(true);
+
     axios
       .post("/api/v1/user/login", { userName, password })
 
@@ -33,7 +34,6 @@ export const useLogin = () => {
         dispatch(login(data));
       })
       .catch((error) => {
-        console.log("Eroor " + error);
         toast.error(error.response.data.message, {
           duration: 1000,
           style: {
